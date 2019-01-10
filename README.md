@@ -53,6 +53,11 @@ Get all forms
 client.get_forms()
 ```
 
+Get form responses
+```
+client.get_responses('FORM_UID')
+```
+
 Create Webhook
 ```
 client.create_webhook('WEBHOOK_URL', 'WEBHOOK_TAG', 'FORM_UID')

@@ -124,6 +124,17 @@ class Client(object):
         """
         return self._get('forms')
 
+    def get_responses(self, form_id, **kwargs):
+        """
+        Returns all responses.
+
+        Returns:
+            A dict.
+
+        """
+        response = self._get("forms/{}/responses".format(form_id), params=kwargs)
+        return response['items']
+
     def create_webhook(self, webhook_url, form_uid, webhook_tag):
         """
 
