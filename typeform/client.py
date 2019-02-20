@@ -132,8 +132,7 @@ class Client(object):
             A dict.
 
         """
-        response = self._get("forms/{}/responses".format(form_id), params=kwargs)
-        return response['items']
+        return self._get("forms/{}/responses".format(form_id), params=kwargs)
 
     def create_webhook(self, webhook_url, form_uid, webhook_tag):
         """
