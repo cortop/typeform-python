@@ -114,7 +114,7 @@ class Client(object):
         response = self._get("forms/{}/responses".format(form_uid), params=params)
         return response['items']
 
-    def get_forms(self):
+    def get_forms(self, **kwargs):
         """
         Returns all forms.
 
@@ -122,7 +122,7 @@ class Client(object):
             A dict.
 
         """
-        return self._get('forms')
+        return self._get('forms', params=kwargs)
 
     def get_responses(self, form_id, **kwargs):
         """
